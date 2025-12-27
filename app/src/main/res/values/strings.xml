@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediReminder</string>
+    
+    <!-- Login Activity -->
+    <string name="login_title">Login</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="signup_link">Don\'t have an account? Sign Up</string>
+    <string name="login_error">Invalid username or password</string>
+    <string name="empty_fields">Please fill all fields</string>
+    
+    <!-- Signup Activity -->
+    <string name="signup_title">Sign Up</string>
+    <string name="email_hint">Email</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="login_link">Already have an account? Login</string>
+    <string name="password_mismatch">Passwords do not match</string>
+    <string name="user_exists">Username or email already exists</string>
+    <string name="signup_success">Account created successfully!</string>
+    
+    <!-- Dashboard Activity -->
+    <string name="dashboard_title">My Medicines</string>
+    <string name="add_medicine">Add Medicine</string>
+    <string name="history">History</string>
+    <string name="logout">Logout</string>
+    <string name="no_medicines">No medicines added yet</string>
+    <string name="welcome">Welcome, %1$s</string>
+    
+    <!-- Add Medicine Activity -->
+    <string name="add_medicine_title">Add Medicine</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="medicine_name_hint">Enter medicine name</string>
+    <string name="dosage">Dosage</string>
+    <string name="dosage_hint">e.g., 1 tablet, 5ml</string>
+    <string name="frequency">Frequency</string>
+    <string name="time">Time</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date (Optional)</string>
+    <string name="save_medicine">Save Medicine</string>
+    <string name="update_medicine">Update Medicine</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="as_needed">As Needed</string>
+    
+    <!-- History Activity -->
+    <string name="history_title">Medicine History</string>
+    <string name="no_history">No history available</string>
+    <string name="taken">Taken</string>
+    <string name="missed">Missed</string>
+    
+    <!-- Common -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete_confirmation">Are you sure you want to delete this medicine?</string>
+</resources>
+
