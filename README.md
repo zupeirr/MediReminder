@@ -119,33 +119,85 @@ Before you begin, ensure you have the following installed:
 
 ## ▶️ How to Run
 
-### Using Android Studio
+### Method 1: Using Android Studio (Recommended)
 
-1. **Connect Device or Start Emulator**
-   - Connect an Android device via USB with USB debugging enabled, OR
-   - Start an Android Virtual Device (AVD) from the AVD Manager
+1. **Open the Project**
+   - Launch Android Studio
+   - Click `File` → `Open`
+   - Navigate to: `C:\Users\ZACK ZULUPP\OneDrive\Documents\MobileAppProject`
+   - Click `OK`
 
-2. **Run the App**
+2. **Wait for Gradle Sync**
+   - Android Studio will automatically download dependencies
+   - Wait for the sync to complete (check bottom status bar)
+   - If sync fails, click `Sync Now` or `Try Again`
+
+3. **Set Up Device/Emulator**
+   
+   **Option A: Use Physical Device**
+   - Connect your Android phone via USB
+   - Enable USB Debugging on your phone:
+     - Go to `Settings` → `About Phone`
+     - Tap `Build Number` 7 times to enable Developer Options
+     - Go to `Settings` → `Developer Options`
+     - Enable `USB Debugging`
+   - Allow USB debugging when prompted on your phone
+   
+   **Option B: Use Emulator**
+   - Click `Tools` → `Device Manager` (or `AVD Manager`)
+   - Click `Create Device`
+   - Select a device (e.g., Pixel 5)
+   - Select a system image (API 24 or higher)
+   - Click `Finish` and then `Play` button to start emulator
+
+4. **Run the App**
    - Click the green `Run` button (▶️) in the toolbar, OR
    - Press `Shift + F10` (Windows/Linux) or `Ctrl + R` (Mac)
-   - Select your target device/emulator
+   - Select your target device/emulator from the list
    - Wait for the app to build and install
+   - The app will launch automatically on your device
 
-### Using Command Line
+### Method 2: Using Command Line
 
-```bash
-# Navigate to project directory
-cd MediReminder
+1. **Open PowerShell/Terminal**
+   ```powershell
+   cd "C:\Users\ZACK ZULUPP\OneDrive\Documents\MobileAppProject"
+   ```
 
-# Build the project
-./gradlew assembleDebug
+2. **Build the Project**
+   ```powershell
+   .\gradlew.bat assembleDebug
+   ```
+   (On Linux/Mac, use `./gradlew assembleDebug`)
 
-# Install on connected device
-./gradlew installDebug
+3. **Install on Connected Device**
+   ```powershell
+   .\gradlew.bat installDebug
+   ```
+   (Make sure your device is connected and USB debugging is enabled)
 
-# Run on device
-adb shell am start -n com.example.medireminder/.activities.LoginActivity
-```
+4. **Run the App**
+   ```powershell
+   adb shell am start -n com.example.medireminder/.activities.LoginActivity
+   ```
+
+### Troubleshooting
+
+**If Gradle sync fails:**
+- Check your internet connection
+- Go to `File` → `Settings` → `Build, Execution, Deployment` → `Gradle`
+- Ensure "Use Gradle from" is set correctly
+- Try `File` → `Invalidate Caches / Restart`
+
+**If build fails:**
+- Ensure JDK is installed and configured
+- Check `File` → `Project Structure` → `SDK Location`
+- Verify Android SDK is installed via `Tools` → `SDK Manager`
+
+**If app crashes on launch:**
+- Check Logcat for error messages
+- Ensure minimum SDK version matches your device/emulator
+- Verify all permissions are granted
 
 ## 📖 Usage Guide
 
@@ -188,12 +240,12 @@ Database file location: `/data/data/com.example.medireminder/databases/MediRemin
 
 Run unit tests:
 ```bash
-./gradlew test
+.\gradlew.bat test
 ```
 
 Run instrumented tests:
 ```bash
-./gradlew connectedAndroidTest
+.\gradlew.bat connectedAndroidTest
 ```
 
 ## 📝 Code Structure
@@ -262,4 +314,3 @@ If you encounter any issues or have questions, please:
 ---
 
 **Note**: This app is for educational and personal use. Always consult with healthcare professionals regarding medication schedules.
-
